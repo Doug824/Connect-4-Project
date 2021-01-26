@@ -47,6 +47,7 @@ function findSpotForCol(x) {
 function placeInTable(y, x) {
   const playerPiece = document.createElement('div');
   playerPiece.classList.add('piece');
+  playerPiece.classList.add('fall');
   if(currPlayer === 1) {
     playerPiece.classList.add('p1');
   } else {
@@ -56,9 +57,8 @@ function placeInTable(y, x) {
   position.append(playerPiece);
 }
 
-/** endGame: announce game end */
-function endGame(message){
-  setTimeout(function(){
+function endGame(message) {
+  setTimeout(function() {
       if(confirm(message)){
         window.location.reload();
       }
@@ -83,10 +83,10 @@ function handleClick(e) {
   board[y][x] = currPlayer;
   placeInTable(y, x);
   if (checkForWin()) {
-    return endGame(`Player ${currPlayer} won! Do you want to restart?`);
+    return endGame(`Player ${currPlayer} is victorious! Go again?`);
   } 
-  if(board.every(cell => cell.every(row => row))){
-    return endGame('The game is tied');
+  if(board.every(cell => cell.every(row => row))) {
+    return endGame('Tie! Try Again!');
   }
     currPlayer = currPlayer === 1 ? 2 : 1;  
 };
@@ -115,7 +115,7 @@ function checkForWin() {
   }
 };
 
-startbtn.addEventListener('click', function start(){
+startbtn.addEventListener('click', function start() {
     makeBoard();
     makeHtmlBoard();
     player.textContent = `Player ${1}'s turn!`;
@@ -123,6 +123,6 @@ startbtn.addEventListener('click', function start(){
     startbtn.disabled = true;
 });
 
-resetbtn.addEventListener('click', function again(){
+resetbtn.addEventListener('click', function again() {
   window.location.reload();
 });
