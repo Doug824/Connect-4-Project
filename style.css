@@ -1,0 +1,90 @@
+#letters { 
+  text-align: center;
+  margin-top: 80px;
+}
+
+html {
+  background: url(https://external-preview.redd.it/-dcqkg2Sg523X-hzpIhMdcH0ed1mnBuKIWksTneaaC0.jpg?auto=webp&s=c218b9d88c9e2b01c2872ef8e68d421f58f06830) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+  position: fixed;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+h1{
+  color:rgb(111, 201, 223);
+  font-size: 55px;
+  opacity: 80%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+h4{
+  color:rgb(111, 201, 223);
+  font-size: 30px;
+  opacity: 90%;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px rgb(29, 24, 24);
+}
+
+.piece {
+  margin: 2px;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  position: relative;
+}
+
+.done {
+  pointer-events: none;
+}
+
+.p1 {
+  background-color: rgb(207, 35, 35);
+  opacity: 80%;
+}
+
+.p2 {
+  background-color: rgb(42, 24, 199);
+  opacity: 80%;
+}
+
+#column-top td {
+  border: dashed 1px rgb(111, 223, 217);
+}
+
+#column-top td:hover {
+  background-color: rgb(121, 198, 204);
+}
+
+#reset, #start {
+  position: static;
+  margin-left: 50%;
+  margin-top: 10%;
+  font-family: 'Cinzel Decorative', cursive;
+  transform: translate(-60%, -60%);
+}
+
+#start {
+  background-color: rgb(42, 24, 199);
+  color:rgb(111, 223, 217);
+}
+#reset {
+  margin-top: 1%;
+  background-color: rgb(207, 35, 35);
+}
