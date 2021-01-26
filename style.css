@@ -87,8 +87,12 @@ h4{
 #reset {
   margin-top: 1%;
   background-color: rgb(207, 35, 35);
+  visibility: hidden;
 }
 
+.disabled{
+  display: none;
+}
 
 .fall {
   animation-name: fall-animation;

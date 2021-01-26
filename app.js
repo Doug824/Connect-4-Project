@@ -126,3 +126,8 @@ startbtn.addEventListener('click', function start() {
 resetbtn.addEventListener('click', function again() {
   window.location.reload();
 });
+
+document.getElementById("start").addEventListener("click", function() {
+  startbtn.classList.add ('disabled');
+  document.getElementById("reset").style.visibility = "visible";
+});
