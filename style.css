@@ -48,6 +48,9 @@ h4{
   height: 90%;
   border-radius: 50%;
   position: relative;
+  border-style: inset;
+  border-color: rgb(0, 0, 0);
+  border-width: .5px;
 }
 
 .done {
